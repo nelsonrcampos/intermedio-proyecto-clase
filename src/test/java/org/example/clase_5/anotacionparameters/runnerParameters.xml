@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Testing Parametros" >
+    <test name="Test con parametros">
+        <!-- Indicamos los parametros -->
+        <parameter name="valor_uno" value="1"></parameter>
+        <parameter name="valor_dos" value="89"></parameter>
+
+        <classes>
+            <class name="org.example.clase_5.anotacionparameters.TestParameters">
+                <methods>
+                    <exclude name="suma_opcional"></exclude>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    
+    <test name="Test con parametro opcional">
+        <parameter name="valor_dos" value="123"></parameter>
+
+        <classes>
+            <class name="org.example.clase_5.anotacionparameters.TestParameters">
+                <methods>
+                    <include name="suma_opcional"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+          
+</suite>
